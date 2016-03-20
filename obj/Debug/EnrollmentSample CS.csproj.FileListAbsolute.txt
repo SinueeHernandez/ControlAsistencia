@@ -1,0 +1,8 @@
+C:\Program Files\DigitalPersona\One Touch SDK\.NET\Samples\Visual Studio 2005\CSharp\Enrollment\bin\Debug\EnrollmentSample CS.exe
+C:\Program Files\DigitalPersona\One Touch SDK\.NET\Samples\Visual Studio 2005\CSharp\Enrollment\bin\Debug\EnrollmentSample CS.pdb
+C:\Program Files\DigitalPersona\One Touch SDK\.NET\Samples\Visual Studio 2005\CSharp\Enrollment\obj\Debug\Enrollment.CaptureForm.resources
+C:\Program Files\DigitalPersona\One Touch SDK\.NET\Samples\Visual Studio 2005\CSharp\Enrollment\obj\Debug\Enrollment.MainForm.resources
+C:\Program Files\DigitalPersona\One Touch SDK\.NET\Samples\Visual Studio 2005\CSharp\Enrollment\obj\Debug\Enrollment.Properties.Resources.resources
+C:\Program Files\DigitalPersona\One Touch SDK\.NET\Samples\Visual Studio 2005\CSharp\Enrollment\obj\Debug\EnrollmentSample CS.csproj.GenerateResource.Cache
+C:\Program Files\DigitalPersona\One Touch SDK\.NET\Samples\Visual Studio 2005\CSharp\Enrollment\obj\Debug\EnrollmentSample CS.exe
+C:\Program Files\DigitalPersona\One Touch SDK\.NET\Samples\Visual Studio 2005\CSharp\Enrollment\obj\Debug\EnrollmentSample CS.pdb
