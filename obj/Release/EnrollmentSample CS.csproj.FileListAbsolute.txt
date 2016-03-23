@@ -1,0 +1,14 @@
+C:\Users\Sinuee\Source\Repos\Enrollment\bin\Release\EnrollmentSample CS.exe.config
+C:\Users\Sinuee\Source\Repos\Enrollment\bin\Release\EnrollmentSample CS.exe
+C:\Users\Sinuee\Source\Repos\Enrollment\bin\Release\EnrollmentSample CS.pdb
+C:\Users\Sinuee\Source\Repos\Enrollment\obj\Release\Enrollment.AgregarReunion.resources
+C:\Users\Sinuee\Source\Repos\Enrollment\obj\Release\Enrollment.CapturaDatos.resources
+C:\Users\Sinuee\Source\Repos\Enrollment\obj\Release\Enrollment.CaptureForm.resources
+C:\Users\Sinuee\Source\Repos\Enrollment\obj\Release\Enrollment.EnrollmentForm.resources
+C:\Users\Sinuee\Source\Repos\Enrollment\obj\Release\Enrollment.ListaAsistencia.resources
+C:\Users\Sinuee\Source\Repos\Enrollment\obj\Release\Enrollment.MainForm.resources
+C:\Users\Sinuee\Source\Repos\Enrollment\obj\Release\Enrollment.Properties.Resources.resources
+C:\Users\Sinuee\Source\Repos\Enrollment\obj\Release\Enrollment.TomarAsistencia.resources
+C:\Users\Sinuee\Source\Repos\Enrollment\obj\Release\EnrollmentSample CS.csproj.GenerateResource.Cache
+C:\Users\Sinuee\Source\Repos\Enrollment\obj\Release\EnrollmentSample CS.exe
+C:\Users\Sinuee\Source\Repos\Enrollment\obj\Release\EnrollmentSample CS.pdb
