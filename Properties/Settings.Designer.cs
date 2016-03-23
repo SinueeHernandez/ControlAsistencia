@@ -22,5 +22,15 @@ namespace Enrollment.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Server=DESKTOP-78AMIN8\\DFESHS01;Database=ControlAsistencia;User ID=sa;Password=sa" +
+            "sa;")]
+        public string ConnectionString {
+            get {
+                return ((string)(this["ConnectionString"]));
+            }
+        }
     }
 }

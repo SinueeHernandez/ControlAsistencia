@@ -73,5 +73,26 @@ namespace Enrollment
 		}
 
 		private DPFP.Template Template;
-	}
+
+        private void CapturarDatos_Click(object sender, EventArgs e)
+        {
+            CapturaDatos Pantalla = new CapturaDatos();
+            Pantalla.StartPosition = FormStartPosition.CenterParent;
+            Pantalla.ShowDialog(this);
+        }
+
+        private void TomarAsistencia_Click(object sender, EventArgs e)
+        {
+            TomarAsistencia Pantalla = new TomarAsistencia();
+            Pantalla.StartPosition = FormStartPosition.CenterParent;
+            Pantalla.ShowDialog(this);
+        }
+
+        private void ListarAsistencia_Click(object sender, EventArgs e)
+        {
+            ListaAsistencia Pantalla = new ListaAsistencia();
+            Pantalla.StartPosition = FormStartPosition.CenterParent;
+            Pantalla.ShowDialog(this);
+        }
+    }
 }

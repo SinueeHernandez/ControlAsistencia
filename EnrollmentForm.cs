@@ -68,5 +68,19 @@ namespace Enrollment
 		}
 
 		private DPFP.Processing.Enrollment Enroller;
-	}
+
+        private void InitializeComponent()
+        {
+            this.SuspendLayout();
+            // 
+            // EnrollmentForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.ClientSize = new System.Drawing.Size(580, 358);
+            this.Name = "EnrollmentForm";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+    }
 }

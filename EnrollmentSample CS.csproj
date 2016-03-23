@@ -34,6 +34,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>FingerPrint.png.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="DPFPDevNET, Version=1.2.0.1, Culture=neutral, PublicKeyToken=696774c42ee28c57, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -63,6 +66,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AgregarReunion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarReunion.Designer.cs">
+      <DependentUpon>AgregarReunion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CapturaDatos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapturaDatos.Designer.cs">
+      <DependentUpon>CapturaDatos.cs</DependentUpon>
+    </Compile>
     <Compile Include="CaptureForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,6 +87,12 @@
     <Compile Include="EnrollmentForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ListaAsistencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListaAsistencia.Designer.cs">
+      <DependentUpon>ListaAsistencia.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,9 +101,21 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AgregarReunion.resx">
+      <DependentUpon>AgregarReunion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CapturaDatos.resx">
+      <DependentUpon>CapturaDatos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CaptureForm.resx">
       <SubType>Designer</SubType>
       <DependentUpon>CaptureForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EnrollmentForm.resx">
+      <DependentUpon>EnrollmentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListaAsistencia.resx">
+      <DependentUpon>ListaAsistencia.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <SubType>Designer</SubType>
@@ -98,6 +131,10 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="TomarAsistencia.resx">
+      <DependentUpon>TomarAsistencia.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -107,9 +144,18 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="TomarAsistencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TomarAsistencia.Designer.cs">
+      <DependentUpon>TomarAsistencia.cs</DependentUpon>
+    </Compile>
     <Compile Include="VerificationForm.cs">
       <SubType>Form</SubType>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="FingerPrint.png.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
