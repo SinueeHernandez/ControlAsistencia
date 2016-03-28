@@ -66,10 +66,18 @@ namespace Enrollment
             VerificationForm Verifier = new VerificationForm();
             if (Verifier.Verify(Template))
             {
-                if (RegistrarAsistencia())
-                    MessageBox.Show("Asistencia Registrada");
+                if (!ExisteRegistro(int.Parse(txtNumeroControl.Text), int.Parse(cmbReuniones.SelectedValue.ToString())))
+                {
+                    if (RegistrarAsistencia())
+                    {
+                        MessageBox.Show("Asistencia Registrada");
+
+                    }
+                    else
+                        MessageBox.Show("Error al guardar los datos contacte al administrador de sistemas");
+                }
                 else
-                    MessageBox.Show("Error al guardar los datos contacte al administrador de sistemas");
+                    MessageBox.Show("Ya existe una asistencia registrada para esta persona en esta reunion");
             }
             else
             {
@@ -167,6 +175,41 @@ namespace Enrollment
             Pantalla.StartPosition = FormStartPosition.CenterParent;
             Pantalla.ShowDialog(this);
             cargarReuniones();
+        }
+        private bool ExisteRegistro(int NumeroControl, int Reunion)
+        {
+            int Contador = 0;
+            using (var conn = new System.Data.SqlClient.SqlConnection(Properties.Settings.Default.ConnectionString))
+            {
+                var cmd = new System.Data.SqlClient.SqlCommand(
+                    " select count (NumeroControl) as Cuantos from Asistencia where PersonaID = @NumeroControl and ReunionID = @ReunionID "
+                    , conn);
+                try
+                {
+                    cmd.Parameters.AddWithValue("@NumeroControl", NumeroControl);
+                    cmd.Parameters.AddWithValue("@ReunionID", Reunion);
+                    conn.Open();
+                    SqlDataReader Reader = cmd.ExecuteReader();
+                    while (Reader.Read())
+                    {
+                        Contador = Reader.GetInt32(0);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    cmd.Dispose();
+                    conn.Close();
+                    return false;
+                }
+                cmd.Dispose();
+                conn.Close();
+            }//using
+
+            if (Contador > 0)
+                return true;
+            else
+                return false;
         }
     }
 

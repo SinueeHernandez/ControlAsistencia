@@ -15,7 +15,6 @@ C:\Users\Sinuee\Source\Repos\Enrollment\obj\Release\EnrollmentSample CS.pdb
 C:\Users\esteban.hernandez\Source\Repos\ControlAsistencia\bin\Release\EnrollmentSample CS.exe.config
 C:\Users\esteban.hernandez\Source\Repos\ControlAsistencia\obj\Release\EnrollmentSample CS.exe
 C:\Users\esteban.hernandez\Source\Repos\ControlAsistencia\obj\Release\EnrollmentSample CS.pdb
-C:\Users\esteban.hernandez\Source\Repos\ControlAsistencia\obj\Release\EnrollmentSample CS.csprojResolveAssemblyReference.cache
 C:\Users\esteban.hernandez\Source\Repos\ControlAsistencia\obj\Release\Enrollment.AgregarReunion.resources
 C:\Users\esteban.hernandez\Source\Repos\ControlAsistencia\obj\Release\Enrollment.CapturaDatos.resources
 C:\Users\esteban.hernandez\Source\Repos\ControlAsistencia\obj\Release\Enrollment.CaptureForm.resources
