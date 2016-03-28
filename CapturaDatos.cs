@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace Enrollment
 {
@@ -46,38 +47,45 @@ namespace Enrollment
         {
             if (ValidaCampos())
             {
-                using (var conn = new System.Data.SqlClient.SqlConnection(Properties.Settings.Default.ConnectionString))
+                if (!ExistePersona(int.Parse(txtNumeroControl.Text)))
                 {
-                    var cmd = new System.Data.SqlClient.SqlCommand(
-                        "Insert into Personas (NumeroControl, Nombre, Puestos, Huella) values (@NumeroControl, @Nombre, @Puesto, @Huella)"
-                        , conn);
-                    try
+                    using (var conn = new System.Data.SqlClient.SqlConnection(Properties.Settings.Default.ConnectionString))
                     {
-                        cmd.Parameters.AddWithValue("@NumeroControl", int.Parse(txtNumeroControl.Text));
-                        cmd.Parameters.AddWithValue("@Nombre", txtNombre.Text);
-                        cmd.Parameters.AddWithValue("@Puesto", txtPuesto.Text);
-                        cmd.Parameters.Add("@Huella", SqlDbType.Binary, Template.Size).Value = Template.Bytes;
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message);
-                        return;
-                    }
-                    try
-                    {
-                        conn.Open();
-                        cmd.ExecuteNonQuery();
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message);
-                    }
-                    finally
-                    {
-                        cmd.Dispose();
-                        conn.Close();
-                    }
-                }//Using
+                        var cmd = new System.Data.SqlClient.SqlCommand(
+                            "Insert into Personas (NumeroControl, Nombre, Puestos, Huella) values (@NumeroControl, @Nombre, @Puesto, @Huella)"
+                            , conn);
+                        try
+                        {
+                            cmd.Parameters.AddWithValue("@NumeroControl", int.Parse(txtNumeroControl.Text));
+                            cmd.Parameters.AddWithValue("@Nombre", txtNombre.Text);
+                            cmd.Parameters.AddWithValue("@Puesto", txtPuesto.Text);
+                            cmd.Parameters.Add("@Huella", SqlDbType.Binary, Template.Size).Value = Template.Bytes;
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message);
+                            return;
+                        }
+                        try
+                        {
+                            conn.Open();
+                            cmd.ExecuteNonQuery();
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message);
+                        }
+                        finally
+                        {
+                            cmd.Dispose();
+                            conn.Close();
+                        }
+                    }//Using
+                }
+                else
+                {
+                    MessageBox.Show("Ya existe una persona con este Numero de control.");
+                }
             }
             else
             {
@@ -93,6 +101,40 @@ namespace Enrollment
         private bool ValidaCampos()
         {
             return !(string.IsNullOrEmpty(txtNombre.Text) || string.IsNullOrEmpty(txtNumeroControl.Text) || string.IsNullOrEmpty(txtPuesto.Text) || Template == null);
+        }
+        private bool ExistePersona(int NumeroControl)
+        {
+            int Contador = 0;
+            using (var conn = new System.Data.SqlClient.SqlConnection(Properties.Settings.Default.ConnectionString))
+            {
+                var cmd = new System.Data.SqlClient.SqlCommand(
+                    " select count (NumeroControl) as Cuantos from Personas where NumeroControl = @NumeroControl "
+                    , conn);
+                try
+                {
+                    cmd.Parameters.AddWithValue("@NumeroControl", NumeroControl);
+                    conn.Open();
+                    SqlDataReader Reader = cmd.ExecuteReader();
+                    while (Reader.Read())
+                    {
+                        Contador = Reader.GetInt32(0);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    cmd.Dispose();
+                    conn.Close();
+                    return false;
+                }
+                cmd.Dispose();
+                conn.Close();
+            }//using
+
+            if (Contador > 0)
+                return true;
+            else
+                return false;
         }
     }
 }
