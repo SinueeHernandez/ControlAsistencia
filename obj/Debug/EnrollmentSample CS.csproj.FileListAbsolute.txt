@@ -21,3 +21,6 @@ C:\Users\Sinuee\Source\Repos\Enrollment\bin\Debug\EnrollmentSample CS.exe.config
 C:\Users\Sinuee\Source\Repos\Enrollment\obj\Debug\Enrollment.TomarAsistencia.resources
 C:\Users\Sinuee\Source\Repos\Enrollment\obj\Debug\Enrollment.AgregarReunion.resources
 C:\Users\Sinuee\Source\Repos\Enrollment\obj\Debug\Enrollment.ListaAsistencia.resources
+C:\Users\esteban.hernandez\Source\Repos\ControlAsistencia\bin\Debug\EnrollmentSample CS.exe.config
+C:\Users\esteban.hernandez\Source\Repos\ControlAsistencia\obj\Debug\EnrollmentSample CS.exe
+C:\Users\esteban.hernandez\Source\Repos\ControlAsistencia\obj\Debug\EnrollmentSample CS.pdb

@@ -25,8 +25,7 @@ namespace Enrollment.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Server=DESKTOP-78AMIN8\\DFESHS01;Database=ControlAsistencia;User ID=sa;Password=sa" +
-            "sa;")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Server=DF-ESHS-01;Database=ControlAsistencia;User ID=sa;Password=sasa;")]
         public string ConnectionString {
             get {
                 return ((string)(this["ConnectionString"]));

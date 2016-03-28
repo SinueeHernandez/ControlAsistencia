@@ -3,7 +3,7 @@
   <Profiles />
   <Settings>
     <Setting Name="ConnectionString" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">Server=DESKTOP-78AMIN8\DFESHS01;Database=ControlAsistencia;User ID=sa;Password=sasa;</Value>
+      <Value Profile="(Default)">Server=DF-ESHS-01;Database=ControlAsistencia;User ID=sa;Password=sasa;</Value>
     </Setting>
   </Settings>
 </SettingsFile>

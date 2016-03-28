@@ -104,6 +104,10 @@ A.ReunionID = @ReunionID "
         private void ListaAsistencia_Load(object sender, EventArgs e)
         {
             cargarReuniones();
+            if (cmbReuniones.Items.Count > 0)
+            {
+                LlenarGrid(int.Parse(cmbReuniones.SelectedValue.ToString()));
+            }
         }
 
         private void cmbReuniones_SelectionChangeCommitted(object sender, EventArgs e)
