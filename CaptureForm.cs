@@ -14,7 +14,7 @@ namespace Enrollment
 	public partial class CaptureForm : Form, DPFP.Capture.EventHandler
 	{
 		private DPFP.Capture.Capture Capturer;
-		
+
 		public CaptureForm()
 		{
 			InitializeComponent();
@@ -45,7 +45,7 @@ namespace Enrollment
 
 		protected void Start()
 		{
-            if (null != Capturer)
+            if (Capturer != null)
             {
                 try
                 {
@@ -61,7 +61,7 @@ namespace Enrollment
 
 		protected void Stop()
 		{
-            if (null != Capturer)
+            if (Capturer != null)
             {
                 try
                 {
