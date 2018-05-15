@@ -17,9 +17,7 @@ namespace Enrollment
         }
 
         private void lblLugar_Click(object sender, EventArgs e)
-        {
-
-        }
+        { }
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
@@ -82,7 +80,6 @@ namespace Enrollment
                 cmd.Dispose();
                 conn.Close();
             }//using
-
         }
     }
 }
