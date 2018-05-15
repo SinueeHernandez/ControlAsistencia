@@ -13,6 +13,8 @@ namespace Enrollment
 	*/
 	public partial class CaptureForm : Form, DPFP.Capture.EventHandler
 	{
+		private DPFP.Capture.Capture Capturer;
+		
 		public CaptureForm()
 		{
 			InitializeComponent();
@@ -24,7 +26,7 @@ namespace Enrollment
             {
                 Capturer = new DPFP.Capture.Capture();				// Create a capture operation.
 
-                if ( null != Capturer )
+                if ( Capturer != null )
                     Capturer.EventHandler = this;					// Subscribe for capturing events.
                 else
                     SetPrompt("Can't initiate capture operation!");
@@ -170,8 +172,5 @@ namespace Enrollment
 				Picture.Image = new Bitmap(bitmap, Picture.Size);	// fit the image into the picture box
 			}));
 		}
-
-		private DPFP.Capture.Capture Capturer;
-
 	}
 }
