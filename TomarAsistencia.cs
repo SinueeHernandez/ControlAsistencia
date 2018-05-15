@@ -71,7 +71,6 @@ namespace Enrollment
                     if (RegistrarAsistencia())
                     {
                         MessageBox.Show("Asistencia Registrada");
-
                     }
                     else
                         MessageBox.Show("Error al guardar los datos contacte al administrador de sistemas");
@@ -155,7 +154,6 @@ namespace Enrollment
             cmbReuniones.DataSource = Reuniones;
             cmbReuniones.DisplayMember = "Nombre";
             cmbReuniones.ValueMember = "ReunionID";
-            
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -211,14 +209,5 @@ namespace Enrollment
             else
                 return false;
         }
-    }
-
-    public class Reunion
-    {
-        public int ReunionID { get; set; }
-        public string Nombre { get; set; }
-        public string Lugar { get; set; }
-        public DateTime FechaInicio { get; set; }
-        public DateTime FechaTermino { get; set; }
     }
 }
