@@ -186,12 +186,7 @@ namespace Enrollment
                 {
                     cmd.Parameters.AddWithValue("@NumeroControl", NumeroControl);
                     cmd.Parameters.AddWithValue("@ReunionID", Reunion);
-                    conn.Open();
-                    SqlDataReader Reader = cmd.ExecuteReader();
-                    while (Reader.Read())
-                    {
-                        Contador = Reader.GetInt32(0);
-                    }
+                    contador = Utilities.checkCount(conn, cmd);
                 }
                 catch (Exception ex)
                 {

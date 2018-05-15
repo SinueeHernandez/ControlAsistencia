@@ -17,9 +17,7 @@ namespace Enrollment
         }
 
         private void CapturaDatos_Load(object sender, EventArgs e)
-        {
-
-        }
+        { }
 
         private void btnCapturarHuella_Click(object sender, EventArgs e)
         {
@@ -91,7 +89,6 @@ namespace Enrollment
             {
                 MessageBox.Show("Información incompleta favor de llenar");
             }
-            
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -113,12 +110,7 @@ namespace Enrollment
                 try
                 {
                     cmd.Parameters.AddWithValue("@NumeroControl", NumeroControl);
-                    conn.Open();
-                    SqlDataReader Reader = cmd.ExecuteReader();
-                    while (Reader.Read())
-                    {
-                        Contador = Reader.GetInt32(0);
-                    }
+                    contador = Utilities.checkCount(conn, cmd);
                 }
                 catch (Exception ex)
                 {
