@@ -13,7 +13,6 @@ namespace Enrollment
 	*/
 	public class VerificationForm : CaptureForm
 	{
-
 		public bool Verify(DPFP.Template template)
 		{
 			Template = template;
@@ -49,7 +48,6 @@ namespace Enrollment
                     MakeReport("The fingerprint was VERIFIED.");
                     Result = true;
                 }
-
                 else
                 {
                     MakeReport("The fingerprint was NOT VERIFIED.");
@@ -67,6 +65,5 @@ namespace Enrollment
 		private DPFP.Template Template;
 		private DPFP.Verification.Verification Verificator;
         private bool Result;
-
 	}
 }
