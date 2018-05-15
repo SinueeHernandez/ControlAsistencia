@@ -112,9 +112,9 @@ namespace Enrollment
                     cmd.Parameters.AddWithValue("@NumeroControl", NumeroControl);
                     contador = Utilities.checkCount(conn, cmd);
                 }
-                catch (Exception ex)
+                catch (Exception exception)
                 {
-                    MessageBox.Show(ex.Message);
+                    MessageBox.Show(exception.Message);
                     cmd.Dispose();
                     conn.Close();
                     return false;
