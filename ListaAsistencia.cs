@@ -53,7 +53,6 @@ A.ReunionID = @ReunionID "
                 conn.Close();
             }//using
             dataGridView1.DataSource = Asistencia;
-
         }
         private void cmbReuniones_SelectedIndexChanged(object sender, EventArgs e)
         { }
